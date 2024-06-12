@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.media.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="871.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mymediaplayer.FXMLDocumentController">
+   <center>
+      <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+         <children>
+            <Slider fx:id="progressBar" StackPane.alignment="BOTTOM_CENTER">
+               <padding>
+                  <Insets bottom="3.0" top="3.0" />
+               </padding>
+            </Slider>
+            <MediaView fx:id="mediaView" fitHeight="250.0" fitWidth="500.0" />
+         </children>
+      </StackPane>
+   </center>
+   <bottom>
+      <VBox alignment="BOTTOM_CENTER" maxHeight="100.0" minHeight="83.0" prefHeight="83.0" prefWidth="871.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="78.0" prefWidth="871.0" style="-fx-background-color: transparent;">
+               <children>
+                  <Button id="Batton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#openFileMethod" style="-fx-background-color: #2A5E78;" text="Open File" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+                     <HBox.margin>
+                        <Insets bottom="3.0" left="7.0" right="7.0" top="10.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="17.0" left="16.0" right="16.0" top="17.0" />
+                     </padding>
+                     <font>
+                        <Font name="Arial Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button id="Batton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#paly" prefHeight="51.0" prefWidth="77.0" style="-fx-background-color: #2A5E78;" text="Play" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+                     <HBox.margin>
+                        <Insets bottom="3.0" left="7.0" right="7.0" top="10.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="17.0" left="16.0" right="16.0" top="17.0" />
+                     </padding>
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button id="Batton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#pause" style="-fx-background-color: #2A5E78;" text="Pause" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+                     <HBox.margin>
+                        <Insets bottom="3.0" left="7.0" right="7.0" top="10.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="17.0" left="16.0" right="16.0" top="17.0" />
+                     </padding>
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button id="Batton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#stop" style="-fx-background-color: #2A5E78;" text="Stop" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+                     <HBox.margin>
+                        <Insets bottom="3.0" left="7.0" right="7.0" top="10.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="17.0" left="16.0" right="16.0" top="17.0" />
+                     </padding>
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button id="Batton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#backForward" style="-fx-background-color: #2A5E78;" text="&lt;&lt;&lt;" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+                     <HBox.margin>
+                        <Insets bottom="3.0" left="7.0" right="7.0" top="10.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="17.0" left="16.0" right="16.0" top="17.0" />
+                     </padding>
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button id="Batton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#fastForward" style="-fx-background-color: #2A5E78;" text="&gt;&gt;&gt;" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+                     <HBox.margin>
+                        <Insets bottom="3.0" left="7.0" right="7.0" top="10.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="17.0" left="16.0" right="16.0" top="17.0" />
+                     </padding>
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button id="Batton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#back10" style="-fx-background-color: #2A5E78;" text="-10s" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+                     <HBox.margin>
+                        <Insets bottom="3.0" left="7.0" right="7.0" top="10.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="17.0" left="16.0" right="16.0" top="17.0" />
+                     </padding>
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button id="Batton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#skip10" style="-fx-background-color: #2A5E78;" text="+10s" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+                     <HBox.margin>
+                        <Insets bottom="3.0" left="7.0" right="7.0" top="10.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="17.0" left="16.0" right="16.0" top="17.0" />
+                     </padding>
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Slider fx:id="volumeSlider" prefHeight="52.0" prefWidth="181.0">
+                     <HBox.margin>
+                        <Insets left="7.0" right="7.0" top="9.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="17.0" left="16.0" right="16.0" top="17.0" />
+                     </padding>
+                  </Slider>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </bottom>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#openFileMethod" text="Open file" />
+              <MenuItem mnemonicParsing="false" onAction="#closeVideo" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>
