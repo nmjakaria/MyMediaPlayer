@@ -30,7 +30,7 @@ public class MyMediaPlayer extends Application {
             }
         });
         
-        
+       
         stage.setScene(scene);
         stage.show();
     }
